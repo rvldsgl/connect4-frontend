@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* src/index.css */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+h1, h2 {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Styling the board */
+.board-container {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  margin: 20px 0;
+}
+
+/* Add some padding to the board cells */
+.board-cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Cell hover effect */
+.board-cell:hover {
+  background-color: #dcdcdc;
+}
+
+/* Styling for the winner text */
+.winner {
+  color: #ff6347; /* Tomato color */
+  font-weight: bold;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+  .board-container {
+    grid-template-columns: repeat(7, 1fr);
+    gap: 4px;
+  }
+
+  .board-cell {
+    width: 40px;
+    height: 40px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+}
