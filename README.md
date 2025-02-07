@@ -1,1 +1,1 @@
-# connect4-frontend
+# Are You Smarter Than AI? The Connect Four Challenge
